@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleStatus</title>
+</head>
+<body>
+  <h1>Status Monitor</h1>
+  <p>Status: <span id="status">Loading...</span></p>
+  <script>
+    fetch('/status').then(res => res.json()).then(data => {
+      document.getElementById('status').innerText = data.status;
+    });
+  </script>
+</body>
+</html>
