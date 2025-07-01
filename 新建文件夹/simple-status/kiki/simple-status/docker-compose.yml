@@ -1,0 +1,10 @@
+
+version: '3'
+services:
+  monitor:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    restart: always
